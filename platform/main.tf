@@ -77,7 +77,7 @@ provider "helm" {
 }
 
 module "addons" {
-  source = "git::https://github.com/blackcatengineering/cib-terraform-modules.git//modules/platform-addons?ref=v1.1.1"
+  source = "git::https://github.com/blackcatengineering/cib-terraform-modules.git//modules/platform-addons?ref=v1.1.2"
 
   # Turn things on here.
   # Magnum's Cinder CSI add-on already creates standard, multiattach and

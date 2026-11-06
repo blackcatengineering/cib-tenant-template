@@ -29,13 +29,13 @@ terraform {
 provider "openstack" {}
 
 module "network" {
-  source       = "git::https://github.com/blackcatengineering/cib-terraform-modules.git//modules/tenant-network?ref=v1.1.1"
+  source       = "git::https://github.com/blackcatengineering/cib-terraform-modules.git//modules/tenant-network?ref=v1.1.2"
   name_prefix  = var.domain
   ipv6_enabled = var.enable_ipv6
 }
 
 module "cluster" {
-  source             = "git::https://github.com/blackcatengineering/cib-terraform-modules.git//modules/k8s-cluster?ref=v1.1.1"
+  source             = "git::https://github.com/blackcatengineering/cib-terraform-modules.git//modules/k8s-cluster?ref=v1.1.2"
   count              = var.enable_cluster ? 1 : 0
   kubernetes_version = var.kubernetes_version
   keypair_name       = module.network.keypair_name

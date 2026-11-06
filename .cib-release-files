@@ -1,0 +1,8 @@
+# Files cloud-in-a-box releases own in this repo (publish.py). Don't edit.
+.github/workflows/deploy.yaml
+.gitignore
+README.md
+infra/main.tf
+infra/variables.tf
+platform/main.tf
+platform/variables.tf
